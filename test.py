@@ -5,12 +5,13 @@ print(os.getcwd())
 
 dirc = os.getcwd()
 
-path = os.path.join(dirc,"dataset/with_mask");
+path = os.path.join(dirc,"dataset/without_mask");
 print(path);
 
 print(path)
-
+count = 0
 for img in os.listdir(path):
 	img_path = os.path.join(path, img)
-	print(img_path)
+	count += 1
+print(count)	
 

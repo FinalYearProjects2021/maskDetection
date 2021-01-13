@@ -41,12 +41,13 @@ for category in CATEGORIES:
     path = os.path.join(DIRECTORY, category)
     for img in os.listdir(path):
     	img_path = os.path.join(path, img)
+    	print(img_path)
     	image = load_img(img_path, target_size=(224, 224))
     	image = img_to_array(image)
     	image = preprocess_input(image)
-
     	data.append(image)
     	labels.append(category)
+    	#print("helo")
 
 # perform one-hot encoding on the labels
 lb = LabelBinarizer()
